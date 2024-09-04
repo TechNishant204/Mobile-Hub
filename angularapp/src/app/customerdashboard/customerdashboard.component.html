@@ -1,0 +1,21 @@
+<div class="registration-container">
+
+      <h1>Customer Registration Page</h1>
+      <p>This page is for customer registration. Once a customer is registered, this page will no longer be displayed upon subsequent logins.</p>
+      <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+            
+        <h2>Fill Your Details</h2>
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" formControlName="customerName">
+        </div>
+        <div>
+          <label for="address">Address:</label>
+          <input type="text" id="address" name="address" formControlName="address">
+        </div>
+        <div>
+          <button type="submit" [disabled]="customerForm.invalid" class="submit-btn">Submit</button>
+        </div>
+      </form>
+  </div>
+  

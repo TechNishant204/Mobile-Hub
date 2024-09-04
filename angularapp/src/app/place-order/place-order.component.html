@@ -1,0 +1,34 @@
+<!-- <div class="order" *ngIf="!isOrderPlaced">
+    <h2>Place Order</h2>
+    <form>
+      <label>Name:</label>
+      <input type="text" id="name" name="name" required>
+      <br>
+      <br>
+      <label>Address:</label>
+      <input type="text" id="address" name="address" required>
+      <br>
+      <br>
+      <label>Total Price:</label>
+      <input type="number" id="price" name="price" required>
+      <button type="button" (click)="placeOrder()">Place Order</button>
+    </form>
+  </div> -->
+  
+  <div class="confirm-order">
+    <h2>Confirm Order</h2>
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" value="{{customerName}}" id="name" >
+    </div>
+    <div>
+      <label for="address">Address:</label>
+      <input type="text" value="{{address}}" id="address">
+    </div>
+    <div>
+      <label for="price">Total Price:</label>
+      <input type="text" value="{{totalPrice}}" id="price" readonly>
+    </div>
+    <button (click)="makePayment()">Make Payment</button>
+  </div>
+  

@@ -1,0 +1,158 @@
+/* body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(60deg, #19191a, rgb(193, 186, 210));
+  font-family: Arial, sans-serif;
+}
+
+.registration-form {
+  width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.registration-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background: transparent;
+  color: #333;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-bottom: 2px solid #007bff;
+}
+
+.form-group .error {
+  color: rgb(243, 66, 66);
+  font-size: smaller;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.registration-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: transparent;
+  color: #333;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.registration-form select:focus {
+  outline: none;
+  border-color: #007bff;
+} */
+
+
+.main-div{
+  /* background-image: url("addmobile1.jpg"); */
+  height: 100vh;
+  
+}
+.container {
+ 
+  margin-top: 10px;
+  background-position: center;
+  background-size: cover;
+  max-width: 500px;  
+  padding: 20px;
+  border: 2px solid rgb(0,0,144);
+  border-radius: 10px;
+  color:black
+  
+  /* Assuming the background is white */
+  
+}
+
+h4 {
+  text-align: center;
+  margin-bottom: 20px;
+  color:black;
+}
+
+.container{
+  backdrop-filter: blur(10px);
+  box-shadow: 10px 20px 20px grey;
+   
+  
+}
+
+
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color:black;
+
+}
+
+
+input[type="text"],
+input[type="number"],
+input[type="url"]{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color:black;
+}
+
+textarea{
+  color: rgba(0, 0, 0, 0.684);
+}
+
+
+
+button:hover {
+  /* background-color: #45a049; */
+}
+.btns{
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  
+
+}

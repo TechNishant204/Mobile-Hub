@@ -1,0 +1,78 @@
+/* Add your custom CSS styles here */
+body{
+  height: 100vh;
+}
+.registration-form {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: -15px;
+  max-width: 400px;
+  height: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid rgb(0,0,144);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* .password{
+  margin-bottom: 20px;
+  height: 55px;
+
+} */
+.form-group {
+  margin-bottom: 20px;
+  height: 50px;
+}
+.form-group #passerror{
+  height: 50px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+/* .submit-button {
+  background: linear-gradient(60deg, #4a3fb0, #534e87, #404057);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width:200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ddd;
+}
+
+.submit-button:hover {
+  
+  color:  white;
+}
+.submit-button:disabled{
+
+  
+  cursor: not-allowed;
+} */
+.submit-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+ 
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+ 
+.submit-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}

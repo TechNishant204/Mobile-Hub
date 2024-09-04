@@ -1,0 +1,21 @@
+<body class="full">
+  <form [formGroup]="reviewForm"  (ngSubmit)="addNewReview()" class="form-container">
+      <h2 style="text-align: center; font-weight: bold;">Add Review Details</h2>
+
+   
+      <label for="mobileModel">Mobile model:<span style="color: red" >* </span></label>
+      <input type="text" formControlName="mobileModel" readonly><br>
+   
+      <label for="body">FeedBack Comments:<span style="color: red">* </span></label>
+      <textarea name="text" formControlName="body" ></textarea><br>
+         
+      <div class="slidecontainer">
+          <label for="rating">Rating:<span style="color: red">* </span></label>
+          <input type="range" min="0" max="5" value="rating" class="slider" id="rating" formControlName="rating">
+          <div>Selected Rating: {{this.reviewForm.get("rating").value}}</div><br>
+      </div>
+       
+   
+      <button type="submit">Submit</button>
+  </form>
+  </body>

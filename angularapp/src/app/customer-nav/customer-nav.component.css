@@ -1,0 +1,72 @@
+.navbar {
+      margin-top: 5px;
+    overflow: hidden;
+    background: linear-gradient(60deg, #0f0c29, #302b63, #24243e);
+    padding: 0;
+    justify-content: flex-end;
+}
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: white; /* Text color */
+    text-align: center;
+    padding: 14px 16px; /* Padding for spacing */
+    text-decoration: none; /* No underline for links */
+  }
+  
+  /* Change the color of links on hover */
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a green color to the current (active) link */
+  .navbar a.active {
+    background-color: #4CAF50; /* Green background for active link */
+    color: white;
+  }
+ .navbar li{
+    list-style-type: none;
+    display: inline;
+    padding: 0%;
+  }
+  .navbar ul{
+    padding: 0;
+    margin: 0;
+  }
+  .navbar h2{
+    
+        margin: 0;
+        padding-left: 10px;
+        margin-right: auto; 
+        font-family: 'Lexend Deca',sans-serif;
+  }
+  .mdal {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .mdal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+   
+  }
+  
+  .mdal-content  button{
+    padding-left: auto;
+    padding-right: auto;
+    border-radius: 6px;
+  }
+  
+  

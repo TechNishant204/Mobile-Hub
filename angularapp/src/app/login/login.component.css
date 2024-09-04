@@ -1,0 +1,92 @@
+.bg-img{
+  /* background-image: url('loginback1.jpg');   */
+  height: 90vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.form-box{
+  margin-top: 50px auto;
+}
+.login-form {  
+  
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 10px; 
+  border:2px solid rgb(0, 0, 144);
+  font-family: Arial, sans-serif;
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  margin-top: 2rem;
+}
+
+.form-group input {
+
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  /* border-color: #007bff; */
+  /* box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); */
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.submit-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.login-form p {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.login-form a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-form a:hover {
+  text-decoration: underline;
+}

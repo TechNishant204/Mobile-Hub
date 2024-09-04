@@ -1,0 +1,31 @@
+
+                     <div *ngIf="isMobilePresent">
+                     <div class="container d-flex flex-wrap justify-content-center">
+                        <div class="card m-2" *ngFor="let c of cartMobiles; index as i" style="width: 18rem;">
+                          <img [src]="c.imageUrl" class="card-img-top" alt="{{c.name}}">
+                          <div class="card-body text-center">
+                            <h5 class="card-title">{{c.model}}</h5>
+                            <p class="card-text">Price: ${{c.price}}</p>
+                            <div class="d-flex justify-content-center align-items-center">
+                              <button class="btn btn-outline-primary btn-sm" (click)="plusQuantity(c)">+</button>
+                              <p class="mx-2 mb-0">{{c?.quantityWantByUser}}</p>
+                              <button class="btn btn-outline-primary btn-sm" [disabled]="c.quantityWantByUser == 1" (click)="minusQuantity(c)">-</button>
+                            </div>
+                            <button class="btn btn-danger mt-2" (click)="removeMobileFromCart(c)">Remove From Cart</button>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <p class="text-center mt-4">Total Price: ${{orderPrice}}</p>
+                      
+                      <div class="text-center">
+                        <button class="btn btn-primary" (click)="placeOrder()" style="padding-bottom: 20px;">Place Order</button>
+                      </div>
+                    </div>
+<div *ngIf="!isMobilePresent">
+  <div class="error123">
+    <ng-lottie [options]="options" (animationCreated)="animationCreated($event)"></ng-lottie>
+  <h1>Cart Is Empty </h1>
+  </div>
+</div>
+                      

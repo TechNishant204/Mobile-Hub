@@ -1,0 +1,69 @@
+<body>
+<div class="registration-form">
+    
+    <h2 style="text-align:center;margin-top: -4px;margin-bottom:25px;">Registration</h2>
+    <form [formGroup]="registrationForm" (ngSubmit)="addUser()" >
+            
+      <div class="form-group">
+        <input style="height: 20px;" id="username" class="username" name="username" placeholder = "username" formControlName="username" type="text" /> <br> 
+        <div style="font-size: smaller;" *ngIf="registrationForm.get('username').invalid && registrationForm.get('username').touched" style="color: rgb(243, 66, 66);">
+          Username is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input style="height: 20px;" id="email" class="email" name="email" placeholder = "Email" formControlName="email" type="email" /> <br> 
+        <div style="font-size: smaller;" *ngIf="registrationForm.controls['email'].errors?.required && registrationForm.get('email').touched" class="error" >
+          Email is required
+        </div>
+        <div *ngIf="registrationForm.controls['email'].errors?.pattern && registrationForm.get('email').touched" class="error" >
+          Email is invalid
+        </div>
+
+      </div>
+
+      <div class="form-group">
+        <input style="height: 20px;" id="password" class="password" name="password" placeholder = "password" formControlName="password" type="password" /> <br> 
+        <div style="font-size: smaller;margin-top: -9px;" *ngIf="registrationForm.controls['password'].errors?.required && registrationForm.get('password').touched" class="error" >
+          Password is required
+        </div>
+        <div  *ngIf="registrationForm.controls['password'].errors?.pattern && registrationForm.get('password').touched" class="error">
+          <p style="margin-bottom: 40px;">*Password must include at least one uppercase letter, one lowercase letter, one digit and one special character</p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input style="height: 20px;" id="confirmPassword" class="confirmPassword" name="confirmPassword" placeholder="confirm password" formControlName="confirmPassword" type="password" /> <br> 
+        <div style="font-size: smaller;" *ngIf="registrationForm.get('confirmPassword').invalid && registrationForm.get('confirmPassword').touched" class="error" >
+          Confirm Password is required
+        </div>
+        <div *ngIf="registrationForm.get('password').value!==registrationForm.get('confirmPassword').value &&  registrationForm.get('confirmPassword').touched"  style="color:rgb(243, 66, 66); display: block;">
+            Password does not match
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input style="height: 20px;" id="mobileNumber" class="mobileNumber" name="mobileNumber" placeholder = "Mobile Number" formControlName="mobileNumber" type="text" /> <br> 
+        <div style="font-size: smaller;" *ngIf="registrationForm.controls['mobileNumber'].errors?.required && registrationForm.get('mobileNumber').touched" class="error">
+          Mobile Number is required
+        </div>
+        <div style="font-size: smaller;" *ngIf="registrationForm.controls['mobileNumber'].errors?.pattern && registrationForm.get('mobileNumber').touched" class="error">
+          Mobile Number is invalid
+        </div>
+      </div>
+
+      <label for="role">Role:<span class="error">*</span></label>
+      <select class="form-select" aria-label="Default select example" formControlName="role">
+        <option disabled selected>select a Role</option>
+        <option value="ADMIN">Admin</option>
+        <option value="CUSTOMER">Customer</option>
+      </select>
+      <br>  <button type="submit" [disabled]="registrationForm.invalid" class="submit-button">Register</button>
+    
+    </form>
+ 
+  </div>
+  </body>
+
+
+  

@@ -1,0 +1,54 @@
+<!-- 
+  <div class="mobile-grid" >
+    <div *ngFor="let mobile of mobiles" class="mobile-card">
+      <img [src]="mobile.imageUrl" alt="{{mobile.model}}">
+      <h3>{{mobile.model}}</h3>
+      <p>Brand:</strong> {{mobile.brand}}</p>
+      <p>Description:</strong> {{mobile.description}}</p>
+      <p>Price:</strong> {{mobile.price}}</p>
+      <p><strong>Quantity:</strong> {{mobile.quantity}}</p>
+    </div>
+</div>
+   
+     <div class="container" style="display: flex !important;">
+       <div class="mobile-card" *ngFor="let mobile of mobiles" style="width: 200px;">
+         <img [src]="mobile.imageUrl" alt="{{mobile.name}}" width="150px">
+         <h4>{{mobile.model}}</h4>
+         <p>{{mobile.description}}</p>
+         <p>Price: ${{mobile.price}}</p>
+         <button (click)="editMobile(mobile)">Edit</button>
+         <button (click)="deleteMobile(mobile.mobileId)">Delete</button>
+       </div>
+     </div> -->
+     
+     <div class="position-relative">
+      <i class="fa fa-search" aria-hidden="true"></i>
+      <input type="text" class="form-control" id="searchBox" (input)="searchMobiles()" [(ngModel)]="searchTerm" placeholder="Search Mobiles.....">
+      </div>
+    <div class="container" style="display: flex !important;">
+      <div class="mobile-card" *ngFor="let mobile of mobiles" style="width: 200px;">
+        <img [src]="mobile.imageUrl" alt="{{mobile.name}}" width="150px">
+        <h4>{{mobile.model}}</h4>
+        <p>{{mobile.description}}</p>
+        <p>Price: <b>${{mobile.price}}</b></p>
+        <div class="btns">
+          <button (click)="editMobile(mobile)">Edit</button>
+          <button (click)="deleteMobile(mobile.mobileId)">Delete</button>
+        
+<!--           
+          <div *ngIf="updateModal" class="mdal" >
+           <div class="mdal-content">
+             <p>Are you want to edit this item?</p>
+             <button style="margin-right: 60px;" (click)="editMobile(mobile)">Edit</button>
+             <button (click)="editModalCancel()">cancel</button>
+           </div>
+          </div>
+          
+        
+             <button style="margin-right: 60px;" (click)="deleteMobile(mobile.mobileId)">Delete</button>
+             <button (click)="deleteModalCancel()">cancel</button>
+           </div>
+          </div>
+        </div> -->
+      </div>
+    </div>

@@ -1,0 +1,20 @@
+<!-- <app-registration></app-registration> -->
+
+
+<div *ngIf="!getRole()">
+
+<app-navbar></app-navbar>
+
+</div>
+
+<div *ngIf="role=='ADMIN' && getRole()">
+    <app-admin-nav></app-admin-nav>
+</div>
+
+<div *ngIf="role=='CUSTOMER' && getRole()">
+    <app-customer-nav></app-customer-nav>
+</div>
+
+
+ 
+<router-outlet></router-outlet>

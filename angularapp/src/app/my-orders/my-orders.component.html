@@ -1,0 +1,35 @@
+<!-- <div *ngFor="let order of orders"  >
+  <tr>
+    <th class="texting">Image</th>
+    <th class="texting">Model</th>
+    <th class="texting">Description</th>
+    <th class="texting">Price</th>
+  </tr>
+  <tr *ngFor="let mobile of order.mobiles"  >
+    <td class="texting"><img [src]="mobile.imageUrl" alt="{{ mobile.model }}"></td> 
+    <td class="texting">{{ mobile.model }}</td>
+    <td class="texting">{{ mobile.description }}</td>
+    <td class="texting">${{ mobile.price }}</td>
+  </tr>
+</div> -->
+
+<H2 style="text-align: center;margin-top: 10px;">My Orders</H2>
+
+<hr>
+<div class="card1" *ngFor="let order of orders">
+  <div class="card" *ngFor="let mobile of order?.mobiles">
+    <div class="image">
+      <img src="{{mobile.imageUrl}}">
+    </div>
+    <div class="content">
+      <b>{{mobile.model}}</b>
+      <h4>₹{{mobile.price}}</h4>
+    </div>
+    <div class="time">
+    <strong>{{order?.dateOrdered | date:'mediumDate'}}</strong>
+  </div>
+  <div class="review">
+    <button style="background-color: rgb(123, 92, 123);color:white;border: none;width: 100px;height:40px;border-radius: 15px;" (click)="addReview(mobile.model)">Add Review</button>
+  </div>
+</div>
+</div>

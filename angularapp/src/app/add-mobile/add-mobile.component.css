@@ -1,0 +1,78 @@
+
+.main-div{
+  /* background-image: url("addmobile1.jpg"); */
+  height: 100vh;
+  
+}
+.container {
+ 
+  margin-top: 10px;
+  background-position: center;
+  background-size: cover;
+  max-width: 500px;  
+  padding: 20px;
+  border: 2px solid rgb(0,0,144);
+  border-radius: 10px;
+  color:black
+  
+  /* Assuming the background is white */
+  
+}
+
+h4 {
+  text-align: center;
+  margin-bottom: 20px;
+  color:black;
+}
+
+.container{
+  backdrop-filter: blur(10px);
+  box-shadow: 10px 20px 20px grey;
+   
+  
+}
+
+
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color:black;
+
+}
+
+
+input[type="text"],
+input[type="number"],
+input[type="url"]{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color:black;
+}
+
+textarea{
+  color: rgba(0, 0, 0, 0.684);
+}
+
+button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding: 10px;
+  background-color: #007bff;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}

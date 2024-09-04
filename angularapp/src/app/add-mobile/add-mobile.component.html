@@ -1,0 +1,74 @@
+
+<div class="main-div">
+  <div class="container">
+    <div class="form-box">
+      <div class="my-form">
+        <h4>Add New Mobile</h4>
+        <form [formGroup]="mobileForm" (ngSubmit)="addNewMobile()">
+          <div class="form-group">
+            <label for="model">Model:<span style="color: red;">*</span></label>
+            <input type="text" id="model" name="model" class="form-control" formControlName="model">
+          </div>
+          <div *ngIf="model.invalid && model.touched" style="color: red;margin-top: -10px;">
+            *model is required
+          </div>
+
+          <div class="form-group">
+            <label for="brand">Brand:<span style="color: red;">*</span></label>
+            <input type="text" id="brand" name="brand" class="form-control" formControlName="brand">
+          </div>
+          <div *ngIf="brand.invalid && brand.touched" style="color: red;margin-top: -10px;">
+            *brand is required
+          </div>
+
+          <div class="form-group">
+            <label for="price">Price:<span style="color: red;">*</span></label>
+            <input type="number" id="price" name="price" class="form-control" formControlName="price">
+          </div>
+          <div *ngIf="price.invalid && price.touched" style="color: red;margin-top: -10px;">
+            *price is required
+          </div>
+          <div *ngIf="price.errors?.min" style="color: red;margin-top: -10px;">
+            *price should be more than 1000
+          </div>
+          <div *ngIf="price.errors?.max" style="color: red;margin-top: -10px;">
+            *price should be less than 150000
+          </div>
+
+
+          <div class="form-group">
+            <label for="description">Description:<span style="color: red;">*</span></label>
+            <textarea id="description" name="description" class="form-control" formControlName="description"></textarea>
+          </div>
+          <div *ngIf="description.invalid && description.touched" style="color: red;margin-bottom: 5px;">
+            *description is required
+          </div>
+
+          <div class="form-group">
+            <label for="imageUrl">Image URL:<span style="color: red;">*</span></label>
+            <input type="text" id="imageUrl" name="imageUrl" class="form-control" formControlName="imageUrl">
+          </div>
+          <div *ngIf="imageUrl.invalid && imageUrl.touched" style="color: red;margin-top: -10px;">
+            *imageUrl is required
+          </div>
+         
+
+          <div class="form-group">
+            <label for="quantity">Quantity:<span style="color: red;">*</span></label>
+            <input type="number" id="quantity" name="quantity" class="form-control" formControlName="quantity">
+          </div>
+          <div *ngIf="quantity.invalid && quantity.touched" style="color: red;margin-top: -10px;">
+            *quantity is required
+          </div>
+          <div *ngIf="quantity.errors?.min" style="color: red;margin-top: -10px;">
+            *quantity should be more than 1
+          </div>
+
+          <button type="submit" class="btn btn-primary" [disabled]="mobileForm.invalid">Add Mobile</button>
+
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+  font-family: 'Lexend Deca',serif;
+}
+.navbar {
+  /* background: linear-gradient(60deg, #19191a, rgb(193, 186, 210)); */
+  background: linear-gradient(60deg, #0f0c29, #302b63, #24243e);
+  font-family: 'Lexend Deca',sans-serif;
+  padding: 1rem ;
+  border-radius: 2px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: all 0.3s ease-in-out;
+  /* margin-bottom: 30px; */
+}
+
+.navheader{
+  display: flex;
+  justify-content: space-between;
+}
+
+.navheader img{
+  height: 30px;
+  width: auto;
+  padding-left: 20px;
+}
+
+img{
+  height: 25px;
+  width: 25px;
+  padding: 0;
+}
+
+.linkslogo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h2 {
+  color: #fff;
+  /* font-family:fantasy; */
+  font-size: 2.3rem;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+}
+
+.navbar ul li {
+  margin: 0 1rem;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none; /* Remove underline */
+  font-size: 1.1rem;
+  font-family: 'Lexend Deca',sans-serif;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  position: relative;
+  padding: 0.5rem;
+  /* border-radius: 5px; Rounded corners for links */
+}
+/* 
+.navbar ul li a:hover {
+  color: #f6f0ee; 
+  text-shadow: 0 0 10px rgba(255, 127, 80, 0.7);
+  transform: scale(1.1); 
+  background: rgba(255, 127, 80, 0.1); 
+  box-shadow: 0 4px 8px rgba(255, 127, 80, 0.3); 
+}
+
+.navbar ul li a:active {
+  color: #ff4500; 
+} */
+
+.navbar ul li a:focus {
+  outline: none;
+  border-bottom: 2px solid #ff7f50; /* Coral color for focus */
+}
+
+/* Animation for navbar appearance */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+  
+.navbar a:hover {
+  /* background-color: white; */
+  color: black;
+  border-bottom: #fff solid 1px;
+} 
+  
+
+

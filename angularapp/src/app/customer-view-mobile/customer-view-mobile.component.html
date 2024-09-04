@@ -1,0 +1,23 @@
+<!-- <h1>Mobiles Hub</h1> -->
+<!-- <div class="mobile-page">
+    <div *ngFor="let mobile of mobiles" class="mobile-item">
+      <img [src]="mobile.imageUrl" alt="{{mobile.name}}" height="100px" width="100px">
+      <h2>{{mobile.name}}</h2>
+      <p>{{mobile.description}}</p>
+      <p>Price: {{mobile.price}}</p>
+    </div>
+  </div> -->
+  
+  <div class="position-relative">
+    <i class="fa fa-search" aria-hidden="true"></i>
+    <input type="text" class="form-control" id="searchBox" (input)="searchMobiles()" [(ngModel)]="searchTerm" placeholder="Search Mobiles.....">
+    </div>
+  <div class="container" style="display: flex !important; gap: 20px;">
+    <div class="mobile-card" *ngFor="let mobile of mobiles" style="width: 200px;">
+      <img [src]="mobile.imageUrl" alt="{{mobile.name}}" width="150px">
+      <h4>{{mobile.model}}</h4>
+      <p>{{mobile.description}}</p>
+      <p>Price: ${{mobile.price}}</p>
+      <button (click)="addToCart(mobile)"><b>Add to Cart</b></button>
+    </div>
+  </div>
